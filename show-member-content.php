@@ -44,8 +44,8 @@ function acab_member_shortcode( $atts = array(), $content = '' ){
     if ( function_exists( 'acab_is_user_member' ) )
         if( is_user_member( (int) $atts['delay'] ) && current_user_can( $atts['capability'] ) )
 	        return $content;
-		elseif( !is_user_member( (int) $atts['delay'] ) && current_user_can( $atts['capability'] ) )
-		    return $atts['message'];
+	elseif( !is_user_member( (int) $atts['delay'] ) && current_user_can( $atts['capability'] ) )
+		return $atts['message'];
 	     	   
 	          
     return 'This content is for members only.';    
